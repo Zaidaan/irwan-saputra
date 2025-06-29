@@ -1,0 +1,730 @@
+/* public/css/app.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Glitten';
+    src: url('/fonts/Glitten-Regular.otf');
+}
+
+/* General Style */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* End of General Style*/
+
+
+/* Navbar Style */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .container{
+    font-family: 'Glitten', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.navbar .container .navbar-header a {
+    font-size: 1.5rem;
+    color: #4C4040;
+}
+.navbar .container .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2.3125rem;
+}
+
+.navbar .container .navbar-nav a{
+    font-size: 1.25rem;
+    color: #4C4040;
+}
+
+/* End of Navbar Style*/
+
+/* Hero Section */
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.hero-section {
+    position: relative;
+    width: 28.625rem;
+    height: 30rem;
+}
+
+.background-overlay {
+    width: 19.9375rem;
+    height: 25.5rem;
+    flex-shrink: 0;
+    background-color:#E0E0E0;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index: 0;
+}
+
+.hero-image { 
+    width: 25.25rem;
+    height: 30.8125rem;
+    aspect-ratio: 404/493;
+    flex-shrink: 0;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-image: url('/images/potrait1.png') cover no-repeat;
+    z-index: 1;
+    transition: all 0.8s ease-out;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.25rem;
+    color: #1C1616;
+}
+
+.hero-cta-button{
+    font-family: 'Glitten', sans-serif;
+    padding: 0 1.8rem;
+    background-color: transparent;
+    border: 1px solid #4C4040;
+    color: #4C4040;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.875rem 6.6875rem;
+    /* box-shadow: 0px 5px 5.8px 0px rgba(0, 0, 0, 0.25); */
+    margin-top: 1.5rem;
+}
+
+.hero-cta-button:hover {
+    background-color: #4C4040;
+    color: white;
+}
+
+/* End of Hero Section Styles*/
+
+/* About Section (Target for animation) */
+.about-section {
+    min-height: 100vh; /* Ensure enough scroll space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    box-sizing: border-box;
+    position: relative; /* For image positioning */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 5%; /* Space between image and text */
+    max-width: 1200px; /* Constrain content width */
+    width: 100%;
+}
+
+.about-image-placeholder {
+    width: 35rem; /* Larger size for the image in the about section */
+    height: 40rem; /* Larger size */
+    flex-shrink: 0; /* Prevent shrinking */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease-out; /* Transition for fade-in */
+}
+/* 
+.about-image-placeholder.visible {
+    opacity: 1;
+} */
+
+
+.about-text-content {
+    flex-grow: 1; /* Take up remaining space */
+    max-width: 600px;
+}
+
+.about-text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #4C4040;
+}
+
+.about-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.about-cta-button {
+    font-family: 'Glitten', sans-serif;
+    padding: 0 1.8rem;
+    background-color: transparent;
+    border: 1px solid #4C4040;
+    color: #4C4040;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.875rem 6.6875rem;
+    /* box-shadow: 0px 5px 5.8px 0px rgba(0, 0, 0, 0.25); */
+    margin-top: 1.5rem;
+}
+
+.about-cta-button:hover {
+    background-color: #4C4040;
+    color: white;
+}
+
+.hero-section.fixed-animate .hero-image {
+    position: absolute;
+    top: 170%;
+    left: -100%;
+    width: 38.125rem;
+    height: 46.4375rem;
+    aspect-ratio: 610/743;
+    transform: none; /* No internal translate */
+    transition: all 0.8s ease-out; 
+    z-index: -10;
+}
+
+.mywork-section {
+    min-height: 100vh; /* Ensure enough scroll space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    padding-top: 0;
+    box-sizing: border-box;
+    position: relative; /* For image positioning */
+}
+
+.circle1 {
+    left: 25%;
+    top: 5%;
+    transform:translate(-50%,-50%);
+    width: 34.4375rem;
+    height: 34.4375rem;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 34.4375rem;
+    background: linear-gradient(151deg, rgba(244, 242, 242, 0.20) 8%, #E0E0E0 88.01%);
+    filter: blur(4.75px);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    z-index:-5;
+}
+
+.circle2 {
+    left: 80%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    width: 20rem;
+    height: 20rem;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 34.4375rem;
+    background: linear-gradient(151deg, rgba(244, 242, 242, 0.20) 8%, #E0E0E0 88.01%);
+    filter: blur(4.75px);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    z-index:-5;
+}
+
+.mywork-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10rem;
+    padding-right: 8rem;
+    top: 10%
+}
+
+.mywork-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mywork-header p {
+    font-family: 'Glitten', sans-serif;
+    font-size: 1.5rem;
+    color:#4C4040;
+}
+
+.seemore-btn {
+    display: flex;
+    padding: 0rem 1.3125rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1.375rem;
+    border: 1px solid #1C1616;
+    background: #FEFEFE;
+}
+
+.seemore-btn:hover {
+    background-color: #4C4040;
+    color: white;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    justify-content: space-between;
+    gap: 3.5rem 0;
+}
+
+/* End of my work style */
+
+/* ... Your existing CSS ... */
+
+/* Skills Section */
+.skills-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.skills-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1C1616;
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    justify-items: center; /* Center items within their grid cells */
+}
+
+.skill-item {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px; /* Max width for individual skill card */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skill-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4C4040;
+    margin-bottom: 1rem;
+}
+
+.proficiency-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.proficiency-level {
+    height: 100%;
+    background-color: #4C4040; /* Your brand color for the bar */
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out; /* Animate proficiency change */
+}
+
+.proficiency-percentage {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.no-skills {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+    width: 100%;
+    grid-column: 1 / -1; /* Make it span all columns in the grid */
+}
+
+/* Responsive adjustments for Skills Section */
+@media (max-width: 768px) {
+    .skills-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller min-width on mobile */
+        gap: 1.5rem;
+    }
+    .skill-item {
+        padding: 1rem;
+    }
+    .skill-name {
+        font-size: 1.1rem;
+    }
+}
+
+/* Blog Section */
+.blog-section {
+    max-width: 1200px;
+    margin: 4rem auto; /* Space from above/below, center */
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between; /* Space out header and list */
+    align-items: flex-start; /* Align header and list to top */
+    gap: 3rem; /* Space between header and list */
+}
+
+.blog-section-header {
+    flex-shrink: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3125rem;
+}
+
+.blog-heading-prefix {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    color: #4C4040;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: stretch;
+}
+
+.blog-heading {
+    color: #4C4040;
+    font-family: Glitten;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: stretch;
+}
+
+.blog-list-container {
+    flex-grow: 1; /* Allow list to take remaining space */
+    max-width: 700px; /* Max width for the blog list itself */
+}
+
+.blog-list-item {
+    display: flex;
+    padding: 2.5rem 1.5625rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 1px solid #e0e0e0; /* Separator line */
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.blog-date {
+    color: #4C4040;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    flex-shrink: 0;
+}
+
+.blog-list-item:hover .blog-date {
+        color: #FAFAFA;
+}
+
+.blog-title-excerpt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    color: #1C1616;
+    flex-grow: 1; /* Title takes up remaining space */
+    margin: 0;
+    margin-left: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.blog-list-item:hover .blog-title-excerpt {
+        color: #FAFAFA;
+}
+
+.blog-read-more-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C1616;
+    transition: transform 0.2s ease;
+}
+
+.blog-list-item:hover {
+    background-color: #4C4040;
+}
+
+.blog-list-item:hover .blog-read-more-arrow {
+    transform: translateX(5px); /* Small hover effect */
+    color: #FAFAFA;
+}
+
+
+
+.blog-pagination {
+    display: flex;
+    justify-content: flex-end; /* Align pagination buttons to the right */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination-button {
+    font-family: 'Glitten', sans-serif;
+    background-color: #1C1616;
+    color: #FAFAFA;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4375rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pagination-button:hover:not(.disabled) {
+    background-color: none;
+    border-color: #4C4040;
+}
+
+.pagination-button.disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.no-blog-posts {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #4C4040;
+    padding: 2rem;
+    width: 100%;
+}
+
+
+/* Responsive adjustments for Blog Section */
+@media (max-width: 768px) {
+    .blog-section {
+        flex-direction: column; /* Stack header and list on small screens */
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        margin: 2rem auto;
+    }
+    .blog-section-header {
+        max-width: 100%;
+    }
+    .blog-heading {
+        font-size: 2rem;
+    }
+    .blog-list-container {
+        max-width: 100%;
+    }
+    .blog-list-item {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center; /* Center content if wrapped */
+        text-align: center;
+    }
+    .blog-date, .blog-read-more-arrow {
+        flex-basis: 100%; /* Take full width on small screens */
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .blog-read-more-arrow {
+        justify-content: center;
+    }
+    .blog-title-excerpt {
+        font-size: 1rem;
+        flex-basis: 100%; /* Take full width */
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align info panel and form to top */
+    gap: 4rem; /* Space between the two columns */
+}
+
+.contact-info-panel {
+    flex-shrink: 0;
+    display: flex;
+    width: 18.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.contact-heading {
+    color: #4C4040;
+    font-family: 'Glitten', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2.5rem;
+}
+
+.contact-profile-image {
+    width: 18.5rem;
+    height: 27.875rem;
+    flex-shrink: 0;
+    aspect-ratio: 148/223;
+    z-index: 1;
+    background: url("/images/potrait2.png") hsla(0, 0%, 100%, 0) 0px 0px / 100% 150.997% no-repeat;
+    filter: grayscale();
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem; /* Space between icons */
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 28px; /* Size of social icon */
+    height: 28px; /* Size of social icon */
+    transition: transform 0.2s ease;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px); /* Simple hover effect */
+}
+
+
+.contact-form-panel {
+    flex-grow: 1; /* Allow form to take remaining space */
+    max-width: 700px; /* Max width for the form itself */
+}
+
+.form-label {
+    color: #1C1616;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.invalid-feedback.d-block {
+    display: block !important;
+}
+
+.contact-cta-button {
+    font-family: 'Glitten', sans-serif;
+    padding: 0 1.8rem;
+    background-color: transparent;
+    border: 1px solid #4C4040;
+    color: #4C4040;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.875rem 6.6875rem;
+    /* box-shadow: 0px 5px 5.8px 0px rgba(0, 0, 0, 0.25); */
+    margin-top: 1.5rem;
+}
+
+.contact-cta-button:hover {
+    background-color: #4C4040;
+    color: white;
+}
+
+
+/* Responsive adjustments for Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack info panel and form on small screens */
+        align-items: center; /* Center items when stacked */
+        text-align: center; /* Center text within panels */
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+    .contact-info-panel, .contact-form-panel {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .contact-heading {
+        font-size: 2rem;
+    }
+    .contact-image-container {
+        max-width: 200px; /* Smaller image on mobile */
+    }
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}
